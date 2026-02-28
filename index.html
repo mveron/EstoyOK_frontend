@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EstoyOK | App de seguridad inteligente con check-ins automaticos</title>
+  <meta
+    id="meta-description"
+    name="description"
+    content="EstoyOK es la app de seguridad personal que aprende tu rutina, hace check-ins automaticos cuando estas bien y avisa a tus seres queridos solo cuando realmente importa."
+  >
+  <meta
+    id="meta-keywords"
+    name="keywords"
+    content="app de seguridad personal, check-in automatico, alerta a cuidadores, seguridad para adultos mayores, seguridad para viajeros solos, monitoreo de bienestar, app de seguridad"
+  >
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="EstoyOK">
+  <meta name="application-name" content="EstoyOK">
+  <meta id="og-title" property="og:title" content="EstoyOK | Seguridad que piensa antes">
+  <meta
+    id="og-description"
+    property="og:description"
+    content="EstoyOK aprende tu rutina, hace check-ins automaticos cuando estas bien y alerta a tus seres queridos solo cuando hace falta."
+  >
+  <meta id="og-url" property="og:url" content="https://estoyok.netlify.app/?lang=es">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EstoyOK">
+  <meta id="og-locale" property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta id="twitter-title" name="twitter:title" content="EstoyOK | Seguridad que piensa antes">
+  <meta
+    id="twitter-description"
+    name="twitter:description"
+    content="Seguridad personal inteligente para vida independiente, tranquilidad familiar y menos falsas alarmas."
+  >
+  <link id="canonical-link" rel="canonical" href="https://estoyok.netlify.app/?lang=es">
+  <link rel="alternate" hreflang="es" href="https://estoyok.netlify.app/?lang=es">
+  <link rel="alternate" hreflang="en" href="https://estoyok.netlify.app/?lang=en">
+  <link rel="alternate" hreflang="pt" href="https://estoyok.netlify.app/?lang=pt">
+  <link rel="alternate" hreflang="x-default" href="https://estoyok.netlify.app/">
+  <meta name="theme-color" content="#0f766e">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: "#effcf8",
+              100: "#d7f8ee",
+              200: "#b1eedc",
+              300: "#7be0c6",
+              400: "#43c7aa",
+              500: "#1fa588",
+              600: "#13816c",
+              700: "#116658",
+              800: "#114f46",
+              900: "#103f39"
+            },
+            sand: "#f5efe3",
+            ink: "#10212b",
+            coral: "#f97360"
+          },
+          boxShadow: {
+            glow: "0 25px 80px rgba(16, 63, 57, 0.22)"
+          },
+          fontFamily: {
+            sans: ["ui-sans-serif", "system-ui", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(123, 224, 198, 0.26), transparent 30%),
+        radial-gradient(circle at top right, rgba(249, 115, 96, 0.16), transparent 24%),
+        linear-gradient(180deg, #f5efe3 0%, #fffdf7 46%, #f4fbf8 100%);
+      color: #10212b;
+    }
+
+    .story-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(14px);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <main>
+    <section class="relative overflow-hidden">
+      <div class="absolute left-1/2 top-0 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-brand-200/30 blur-3xl"></div>
+      <div class="mx-auto max-w-7xl px-6 pb-20 pt-8 lg:px-8">
+        <header class="flex flex-wrap items-center justify-between gap-4">
+          <a id="brand-link" href="https://estoyok.netlify.app/" class="flex items-center gap-3">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-700 text-lg font-bold text-white shadow-lg shadow-brand-900/20">
+              EO
+            </div>
+            <div>
+              <p class="text-lg font-semibold tracking-tight text-ink">EstoyOK</p>
+              <p id="header-tagline" class="text-sm text-slate-600">Seguridad personal, sin ruido</p>
+            </div>
+          </a>
+          <div class="flex items-center gap-3">
+            <nav class="flex items-center gap-2 rounded-full border border-brand-700/15 bg-white/80 p-1 shadow-sm" aria-label="Language selector">
+              <a class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-brand-50" data-lang-link="es" href="https://estoyok.netlify.app/?lang=es">ES</a>
+              <a class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-brand-50" data-lang-link="en" href="https://estoyok.netlify.app/?lang=en">EN</a>
+              <a class="rounded-full px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-brand-50" data-lang-link="pt" href="https://estoyok.netlify.app/?lang=pt">PT</a>
+            </nav>
+            <a
+              href="#download"
+              id="header-cta"
+              class="hidden rounded-full border border-brand-700/20 bg-white/80 px-5 py-3 text-sm font-semibold text-brand-800 shadow-sm transition hover:-translate-y-0.5 hover:bg-white md:inline-flex"
+            >
+              Descargar gratis
+            </a>
+          </div>
+        </header>
+
+        <div class="grid items-center gap-16 pt-14 lg:grid-cols-[1.1fr_0.9fr] lg:pt-20">
+          <div>
+            <div id="hero-badge" class="inline-flex items-center gap-2 rounded-full border border-brand-700/15 bg-white/70 px-4 py-2 text-sm text-brand-800 shadow-sm">
+              <span class="inline-block h-2.5 w-2.5 rounded-full bg-coral"></span>
+              Porque a alguien le importa saber si estas bien
+            </div>
+            <h1 id="hero-title" class="mt-6 max-w-3xl text-5xl font-black tracking-tight text-ink sm:text-6xl lg:text-7xl">
+              Seguridad que
+              <span class="text-brand-700">piensa antes</span>
+            </h1>
+            <p id="hero-description" class="mt-6 max-w-2xl text-lg leading-8 text-slate-700 sm:text-xl">
+              EstoyOK aprende tu rutina diaria y hace check-ins automaticos cuando estas bien. Si algo parece fuera de lo normal, te acompana con un recordatorio amable y avisa a tus seres queridos solo cuando realmente hace falta.
+            </p>
+
+            <div id="hero-pills" class="mt-8 flex flex-wrap gap-3 text-sm font-medium text-slate-700">
+              <span class="rounded-full bg-white/80 px-4 py-2 shadow-sm">Safety Score inteligente</span>
+              <span class="rounded-full bg-white/80 px-4 py-2 shadow-sm">Check-ins automaticos</span>
+              <span class="rounded-full bg-white/80 px-4 py-2 shadow-sm">Alertas con privacidad</span>
+              <span class="rounded-full bg-white/80 px-4 py-2 shadow-sm">Espanol, English e Portugues</span>
+            </div>
+
+            <div id="download" class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="https://estoyok.netlify.app/?lang=es#app-store-placeholder"
+                aria-label="Placeholder de App Store"
+                id="app-store-link"
+                class="group inline-flex min-w-[220px] items-center justify-center gap-4 rounded-2xl bg-ink px-6 py-4 text-left text-white shadow-xl shadow-slate-900/20 transition hover:-translate-y-1"
+              >
+                <svg class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M16.71 12.88c.03 3.23 2.83 4.31 2.86 4.33-.02.08-.45 1.54-1.48 3.05-.89 1.31-1.82 2.61-3.28 2.63-1.43.03-1.89-.85-3.52-.85s-2.15.82-3.49.87c-1.4.05-2.47-1.41-3.36-2.71C2.56 17.47 1.1 12.5 3.06 9.1c.97-1.68 2.71-2.74 4.59-2.77 1.43-.03 2.77.96 3.52.96.75 0 2.38-1.18 4.01-1.01.68.03 2.58.27 3.8 2.05-.1.06-2.27 1.32-2.27 3.55Zm-2.58-7.66c.74-.89 1.24-2.13 1.1-3.37-1.06.04-2.34.71-3.1 1.6-.68.79-1.28 2.06-1.11 3.27 1.18.09 2.37-.6 3.11-1.5Z"/>
+                </svg>
+                <span>
+                  <span id="app-store-top" class="block text-xs text-slate-300">Disponible en</span>
+                  <span id="app-store-label" class="block text-lg font-semibold">App Store</span>
+                </span>
+              </a>
+              <a
+                href="https://estoyok.netlify.app/?lang=es#google-play-placeholder"
+                aria-label="Placeholder de Google Play"
+                id="google-play-link"
+                class="group inline-flex min-w-[220px] items-center justify-center gap-4 rounded-2xl border border-slate-200 bg-white px-6 py-4 text-left text-ink shadow-lg shadow-brand-900/10 transition hover:-translate-y-1"
+              >
+                <svg class="h-8 w-8" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#34A853" d="M3.59 2.27 13.8 12.5 3.57 22.73a2.3 2.3 0 0 1-.57-1.56V3.83c0-.58.21-1.12.59-1.56Z"/>
+                  <path fill="#4285F4" d="m16.9 15.59-3.1-3.09L3.59 22.73c.35.29.8.47 1.28.47.36 0 .72-.1 1.04-.29l11-6.32Z"/>
+                  <path fill="#FBBC04" d="M21.08 10.42 16.9 8.01 13.8 12.5l3.1 3.09 4.17-2.39a1.55 1.55 0 0 0 .79-1.39 1.58 1.58 0 0 0-.78-1.39Z"/>
+                  <path fill="#EA4335" d="M3.59 2.27 13.8 12.5l3.1-4.49-11-6.34a2.12 2.12 0 0 0-2.31.6Z"/>
+                </svg>
+                <span>
+                  <span id="google-play-top" class="block text-xs text-slate-500">Disponible en</span>
+                  <span id="google-play-label" class="block text-lg font-semibold">Google Play</span>
+                </span>
+              </a>
+            </div>
+
+            <p id="placeholder-note" class="mt-4 text-sm text-slate-500">
+              Los enlaces de App Store y Google Play son placeholders temporales.
+            </p>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -left-8 top-10 hidden h-24 w-24 rounded-full bg-coral/20 blur-2xl lg:block"></div>
+            <div class="story-card relative rounded-[2rem] border border-white/70 p-5 shadow-glow">
+              <div id="score-panel" class="rounded-[1.75rem] bg-ink p-5 text-white">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-sm uppercase tracking-[0.3em] text-brand-200">Safety Score</p>
+                    <p class="mt-2 text-5xl font-black">92</p>
+                  </div>
+                  <div class="rounded-2xl bg-white/10 px-4 py-3 text-right">
+                    <p class="text-xs uppercase tracking-[0.25em] text-slate-300">Estado</p>
+                    <p class="mt-1 text-base font-semibold text-brand-200">Check-in automatico</p>
+                  </div>
+                </div>
+                <div class="mt-6 h-3 overflow-hidden rounded-full bg-white/10">
+                  <div class="h-full w-[92%] rounded-full bg-gradient-to-r from-brand-300 via-brand-400 to-brand-200"></div>
+                </div>
+                <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                  <div class="rounded-2xl bg-white/8 p-4">
+                    <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Senales</p>
+                    <p class="mt-2 text-sm text-slate-200">Ubicacion, actividad, movimiento, rutina y bateria</p>
+                  </div>
+                  <div class="rounded-2xl bg-white/8 p-4">
+                    <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Privacidad</p>
+                    <p class="mt-2 text-sm text-slate-200">Tus datos de comportamiento quedan en tu telefono</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="mini-story-grid" class="mt-5 grid gap-4 sm:grid-cols-2">
+                <article class="rounded-3xl bg-white p-5 shadow-sm">
+                  <p class="text-sm font-semibold text-brand-700">Para vida independiente</p>
+                  <p class="mt-2 text-sm leading-6 text-slate-600">
+                    Ayuda a adultos mayores a vivir con autonomia mientras su familia se siente cerca y tranquila.
+                  </p>
+                </article>
+                <article class="rounded-3xl bg-brand-50 p-5 shadow-sm">
+                  <p class="text-sm font-semibold text-brand-800">Para tranquilidad diaria</p>
+                  <p class="mt-2 text-sm leading-6 text-slate-700">
+                    Ideal para viajeros solos, personas con condiciones de salud y cualquiera que quiera una red de apoyo inteligente.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <div id="stats-grid" class="grid gap-6 lg:grid-cols-3">
+        <div class="rounded-[2rem] bg-white/80 p-8 shadow-sm ring-1 ring-slate-200/70">
+          <p class="text-4xl font-black text-brand-700">5</p>
+          <h2 class="mt-4 text-xl font-bold text-ink">Cinco senales, una sola decision inteligente</h2>
+          <p class="mt-3 leading-7 text-slate-600">
+            Ubicacion, actividad del telefono, movimiento, rutina diaria y bateria se combinan para entender si estas bien.
+          </p>
+        </div>
+        <div class="rounded-[2rem] bg-ink p-8 text-white shadow-sm">
+          <p class="text-4xl font-black text-brand-200">7 dias</p>
+          <h2 class="mt-4 text-xl font-bold">Suficientes para aprender tu ritmo</h2>
+          <p class="mt-3 leading-7 text-slate-300">
+            En una semana, EstoyOK entiende tus patrones y reduce check-ins manuales sin bajar la proteccion.
+          </p>
+        </div>
+        <div class="rounded-[2rem] bg-coral p-8 text-white shadow-sm">
+          <p class="text-4xl font-black">0 ruido</p>
+          <h2 class="mt-4 text-xl font-bold">Alertas solo cuando importa</h2>
+          <p class="mt-3 leading-7 text-orange-50">
+            Tus seres queridos ven un score de seguridad, no un sistema invasivo de vigilancia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-8 lg:px-8">
+      <div id="features-intro" class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-700">Por que EstoyOK</p>
+        <h2 class="mt-4 text-4xl font-black tracking-tight text-ink sm:text-5xl">
+          Una app de seguridad personal que trabaja con tu vida, no contra ella
+        </h2>
+        <p class="mt-5 text-lg leading-8 text-slate-600">
+          Las apps tradicionales piden demasiado y entienden demasiado poco. EstoyOK aprende tu rutina, automatiza los momentos seguros y escala solo cuando algo parece realmente distinto.
+        </p>
+      </div>
+
+      <div id="feature-grid" class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <article class="rounded-[2rem] bg-white/85 p-7 shadow-sm ring-1 ring-slate-200/70">
+          <h3 class="text-xl font-bold text-ink">Smart Safety Score</h3>
+          <p class="mt-3 leading-7 text-slate-600">
+            Un puntaje de 0 a 100 calculado en tiempo real con las senales que mejor describen tu bienestar diario.
+          </p>
+        </article>
+        <article class="rounded-[2rem] bg-white/85 p-7 shadow-sm ring-1 ring-slate-200/70">
+          <h3 class="text-xl font-bold text-ink">Check-ins automaticos</h3>
+          <p class="mt-3 leading-7 text-slate-600">
+            Cuando tu score es alto, la app confirma que estas bien en silencio. Sin friccion. Sin ansiedad.
+          </p>
+        </article>
+        <article class="rounded-[2rem] bg-white/85 p-7 shadow-sm ring-1 ring-slate-200/70">
+          <h3 class="text-xl font-bold text-ink">Safe Zones</h3>
+          <p class="mt-3 leading-7 text-slate-600">
+            Marca casa, oficina, gimnasio o cualquier lugar confiable. Estar ahi mejora tu score y simplifica los check-ins.
+          </p>
+        </article>
+        <article class="rounded-[2rem] bg-white/85 p-7 shadow-sm ring-1 ring-slate-200/70">
+          <h3 class="text-xl font-bold text-ink">Aprendizaje de patrones</h3>
+          <p class="mt-3 leading-7 text-slate-600">
+            En pocos dias, EstoyOK detecta tu comportamiento normal y reconoce cuando algo sale de lo habitual.
+          </p>
+        </article>
+        <article class="rounded-[2rem] bg-white/85 p-7 shadow-sm ring-1 ring-slate-200/70">
+          <h3 class="text-xl font-bold text-ink">Alertas a cuidadores</h3>
+          <p class="mt-3 leading-7 text-slate-600">
+            Familiares, amigos o vecinos reciben una alerta solo despues de que el sistema probo pasos mas suaves primero.
+          </p>
+        </article>
+        <article class="rounded-[2rem] bg-white/85 p-7 shadow-sm ring-1 ring-slate-200/70">
+          <h3 class="text-xl font-bold text-ink">Privacidad desde el diseno</h3>
+          <p class="mt-3 leading-7 text-slate-600">
+            Los datos de comportamiento quedan en el dispositivo. Los cuidadores ven claridad, no vigilancia.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <div class="rounded-[2.5rem] bg-ink px-8 py-12 text-white sm:px-12">
+        <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div id="stories-intro">
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-200">Historias reales</p>
+            <h2 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+              La tranquilidad tambien es emocional
+            </h2>
+            <p class="mt-5 max-w-xl text-lg leading-8 text-slate-300">
+              El valor es simple: menos miedo, menos interrupciones y mas independencia. Estos son los momentos para los que EstoyOK fue creada.
+            </p>
+          </div>
+          <div id="stories-grid" class="grid gap-5">
+            <article class="rounded-[2rem] bg-white/8 p-6 ring-1 ring-white/10">
+              <p class="text-lg leading-8 text-slate-100">
+                "Mi mama vive sola y odia sentirse vigilada. Con EstoyOK conserva su libertad y yo se cuando realmente debo prestar atencion."
+              </p>
+              <p class="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-200">Cuidado familiar</p>
+            </article>
+            <article class="rounded-[2rem] bg-white/8 p-6 ring-1 ring-white/10">
+              <p class="text-lg leading-8 text-slate-100">
+                "Viajo sola por trabajo. Saber que la app detectaria si me salgo de mi ritmo normal me hace sentir acompanada sin sentirme observada."
+              </p>
+              <p class="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-200">Viajera sola</p>
+            </article>
+            <article class="rounded-[2rem] bg-white/8 p-6 ring-1 ring-white/10">
+              <p class="text-lg leading-8 text-slate-100">
+                "Es la primera app de seguridad que no me molesta todo el dia. Solo actua cuando algo realmente parece mal."
+              </p>
+              <p class="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-200">Bienestar diario</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-4 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+        <div id="how-intro">
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-700">Como funciona</p>
+          <h2 class="mt-4 text-4xl font-black tracking-tight text-ink">Simple para vos. Reasegurante para quienes te quieren.</h2>
+        </div>
+        <div id="how-steps" class="grid gap-5 md:grid-cols-3">
+          <article class="rounded-[2rem] bg-white/85 p-6 shadow-sm ring-1 ring-slate-200/70">
+            <p class="text-sm font-semibold text-brand-700">01</p>
+            <h3 class="mt-3 text-xl font-bold text-ink">Configuralo una vez</h3>
+            <p class="mt-3 leading-7 text-slate-600">
+              Agrega tus contactos de confianza y define los lugares donde normalmente te sentis segura o seguro.
+            </p>
+          </article>
+          <article class="rounded-[2rem] bg-white/85 p-6 shadow-sm ring-1 ring-slate-200/70">
+            <p class="text-sm font-semibold text-brand-700">02</p>
+            <h3 class="mt-3 text-xl font-bold text-ink">Deja que aprenda</h3>
+            <p class="mt-3 leading-7 text-slate-600">
+              Durante la primera semana, EstoyOK reconoce tu ritmo cotidiano y reduce check-ins innecesarios.
+            </p>
+          </article>
+          <article class="rounded-[2rem] bg-white/85 p-6 shadow-sm ring-1 ring-slate-200/70">
+            <p class="text-sm font-semibold text-brand-700">03</p>
+            <h3 class="mt-3 text-xl font-bold text-ink">Mantente protegido</h3>
+            <p class="mt-3 leading-7 text-slate-600">
+              Si todo esta bien, la app se mantiene silenciosa. Si algo parece raro, escala con cuidado.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+        <div id="faq-intro">
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-700">FAQ</p>
+          <h2 class="mt-4 text-4xl font-black tracking-tight text-ink sm:text-5xl">Preguntas que tambien ayudan al SEO</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">
+            Esta pagina incluye respuestas claras sobre seguridad personal, check-ins automaticos, privacidad y monitoreo para adultos mayores y viajeros.
+          </p>
+        </div>
+        <div id="faq-grid" class="grid gap-4">
+          <article class="rounded-[2rem] bg-white/85 p-6 shadow-sm ring-1 ring-slate-200/70">
+            <h3 class="text-xl font-bold text-ink">Como funciona EstoyOK?</h3>
+            <p class="mt-3 leading-7 text-slate-600">
+              EstoyOK aprende tu rutina, calcula un Safety Score con cinco senales y hace check-ins automaticos cuando estas bien. Si detecta algo inusual, te pide confirmacion y alerta a tus cuidadores solo cuando hace falta.
+            </p>
+          </article>
+          <article class="rounded-[2rem] bg-white/85 p-6 shadow-sm ring-1 ring-slate-200/70">
+            <h3 class="text-xl font-bold text-ink">Que ven los cuidadores?</h3>
+            <p class="mt-3 leading-7 text-slate-600">
+              Ven un numero de seguridad y el estado general de la situacion. No ven tu historial de actividad ni un seguimiento invasivo de tu comportamiento.
+            </p>
+          </article>
+          <article class="rounded-[2rem] bg-white/85 p-6 shadow-sm ring-1 ring-slate-200/70">
+            <h3 class="text-xl font-bold text-ink">Funciona en iPhone y Android?</h3>
+            <p class="mt-3 leading-7 text-slate-600">
+              Si. EstoyOK esta pensada para iOS y Android, con descarga desde App Store y Google Play.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-5xl px-6 py-24 text-center lg:px-8">
+      <div class="rounded-[2.5rem] border border-brand-700/10 bg-gradient-to-br from-brand-700 via-brand-800 to-ink px-8 py-14 text-white shadow-glow">
+        <div id="final-copy">
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-200">Descarga EstoyOK</p>
+          <h2 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+            Hace menos check-ins. Senti mas seguridad.
+          </h2>
+          <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-200">
+            Seguridad inteligente para vida independiente, tranquilidad familiar y confianza cotidiana.
+          </p>
+        </div>
+        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a id="footer-app-store-link" href="https://estoyok.netlify.app/?lang=es#app-store-placeholder" aria-label="Placeholder de App Store" class="inline-flex items-center gap-3 rounded-2xl bg-white px-6 py-4 font-semibold text-ink transition hover:-translate-y-1">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16.71 12.88c.03 3.23 2.83 4.31 2.86 4.33-.02.08-.45 1.54-1.48 3.05-.89 1.31-1.82 2.61-3.28 2.63-1.43.03-1.89-.85-3.52-.85s-2.15.82-3.49.87c-1.4.05-2.47-1.41-3.36-2.71C2.56 17.47 1.1 12.5 3.06 9.1c.97-1.68 2.71-2.74 4.59-2.77 1.43-.03 2.77.96 3.52.96.75 0 2.38-1.18 4.01-1.01.68.03 2.58.27 3.8 2.05-.1.06-2.27 1.32-2.27 3.55Zm-2.58-7.66c.74-.89 1.24-2.13 1.1-3.37-1.06.04-2.34.71-3.1 1.6-.68.79-1.28 2.06-1.11 3.27 1.18.09 2.37-.6 3.11-1.5Z"/>
+            </svg>
+            <span id="footer-app-store-label">App Store</span>
+          </a>
+          <a id="footer-google-play-link" href="https://estoyok.netlify.app/?lang=es#google-play-placeholder" aria-label="Placeholder de Google Play" class="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-6 py-4 font-semibold text-white transition hover:-translate-y-1">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#34A853" d="M3.59 2.27 13.8 12.5 3.57 22.73a2.3 2.3 0 0 1-.57-1.56V3.83c0-.58.21-1.12.59-1.56Z"/>
+              <path fill="#4285F4" d="m16.9 15.59-3.1-3.09L3.59 22.73c.35.29.8.47 1.28.47.36 0 .72-.1 1.04-.29l11-6.32Z"/>
+              <path fill="#FBBC04" d="M21.08 10.42 16.9 8.01 13.8 12.5l3.1 3.09 4.17-2.39a1.55 1.55 0 0 0 .79-1.39 1.58 1.58 0 0 0-.78-1.39Z"/>
+              <path fill="#EA4335" d="M3.59 2.27 13.8 12.5l3.1-4.49-11-6.34a2.12 2.12 0 0 0-2.31.6Z"/>
+            </svg>
+            <span id="footer-google-play-label">Google Play</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mx-auto max-w-7xl px-6 pb-12 lg:px-8">
+      <div class="flex flex-col gap-4 border-t border-slate-200/80 pt-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+        <p id="footer-copy">EstoyOK es una app de seguridad personal, check-ins inteligentes, monitoreo de bienestar y alertas a cuidadores con privacidad primero.</p>
+        <div class="flex items-center gap-4">
+          <a class="transition hover:text-brand-700" data-lang-link="es" href="https://estoyok.netlify.app/?lang=es">ES</a>
+          <a class="transition hover:text-brand-700" data-lang-link="en" href="https://estoyok.netlify.app/?lang=en">EN</a>
+          <a class="transition hover:text-brand-700" data-lang-link="pt" href="https://estoyok.netlify.app/?lang=pt">PT</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script id="structured-data" type="application/ld+json"></script>
+  <script src="./site.js"></script>
+</body>
+</html>

@@ -39,7 +39,7 @@
   <link rel="alternate" hreflang="en" href="https://estoyok.netlify.app/?lang=en">
   <link rel="alternate" hreflang="pt" href="https://estoyok.netlify.app/?lang=pt">
   <link rel="alternate" hreflang="x-default" href="https://estoyok.netlify.app/">
-  <meta name="theme-color" content="#0f766e">
+  <meta name="theme-color" content="#42B087">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -47,23 +47,23 @@
         extend: {
           colors: {
             brand: {
-              50: "#effcf8",
-              100: "#d7f8ee",
-              200: "#b1eedc",
-              300: "#7be0c6",
-              400: "#43c7aa",
-              500: "#1fa588",
-              600: "#13816c",
-              700: "#116658",
-              800: "#114f46",
-              900: "#103f39"
+              50: "#f0faf5",
+              100: "#d4f3e4",
+              200: "#abead0",
+              300: "#7adbb5",
+              400: "#52c89b",
+              500: "#42B087",
+              600: "#359070",
+              700: "#287259",
+              800: "#215b47",
+              900: "#1a4a3a"
             },
             sand: "#f5efe3",
             ink: "#10212b",
             coral: "#f97360"
           },
           boxShadow: {
-            glow: "0 25px 80px rgba(16, 63, 57, 0.22)"
+            glow: "0 25px 80px rgba(26, 74, 58, 0.22)"
           },
           fontFamily: {
             sans: ["ui-sans-serif", "system-ui", "sans-serif"]
@@ -79,9 +79,9 @@
 
     body {
       background:
-        radial-gradient(circle at top left, rgba(123, 224, 198, 0.26), transparent 30%),
+        radial-gradient(circle at top left, rgba(66, 176, 135, 0.22), transparent 30%),
         radial-gradient(circle at top right, rgba(249, 115, 96, 0.16), transparent 24%),
-        linear-gradient(180deg, #f5efe3 0%, #fffdf7 46%, #f4fbf8 100%);
+        linear-gradient(180deg, #f5efe3 0%, #fffdf7 46%, #f0faf5 100%);
       color: #10212b;
     }
 
@@ -98,9 +98,7 @@
       <div class="mx-auto max-w-7xl px-6 pb-20 pt-8 lg:px-8">
         <header class="flex flex-wrap items-center justify-between gap-4">
           <a id="brand-link" href="https://estoyok.netlify.app/" class="flex items-center gap-3">
-            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-700 text-lg font-bold text-white shadow-lg shadow-brand-900/20">
-              EO
-            </div>
+            <img src="./assets/icon.svg" alt="EstoyOK" class="h-11 w-11 rounded-2xl shadow-lg shadow-brand-900/20">
             <div>
               <p class="text-lg font-semibold tracking-tight text-ink">EstoyOK</p>
               <p id="header-tagline" class="text-sm text-slate-600">Seguridad personal, sin ruido</p>

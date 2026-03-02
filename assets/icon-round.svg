@@ -1,0 +1,8 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Round background -->
+  <circle cx="512" cy="512" r="512" fill="#42B087"/>
+  <!-- Shield body -->
+  <path d="M512 180C512 180 240 282 240 282V520C240 724 384 870 512 930C640 870 784 724 784 520V282C784 282 512 180 512 180Z" fill="rgba(255,255,255,0.15)" stroke="white" stroke-width="28" stroke-linejoin="round"/>
+  <!-- Checkmark -->
+  <path d="M360 524L472 636L664 420" stroke="white" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
